@@ -16,3 +16,6 @@ npm run build
 ```
 
 For more information see the [docs for vueify](https://github.com/vuejs/vueify).
+
+# vue-cli commond
+vue init browserify-simple mynews
