@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title></title>
+    <style type="text/css">
+        body {
+            font: normal 100% Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    　　　　
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    　　<![endif]-->
+</head>
+<body>
+<div id="demo" style="width:100%">
+    <div style="height:600px; width: 30%;float:left;overflow-y:auto">
+        <ul>
+
+            <li v-for="record in commits.data">
+                <a href="javascript:void(0)" v-on:click="say(record.id)">{{record.title}}</a>
+            </li>
+        </ul>
+    </div>
+    <div style="height:600px; width: 70%;float:right;overflow-y:auto">
+        {{{content}}}
+    </div>
+
+</div>
+
+<script src="dist/news.js"></script>
+</body>
+</html>

@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "watchify -vd -p browserify-hmr -e src/main.js -o dist/build.js & http-server -c 1 -a localhost",
     "dev2": "watchify -vd -p browserify-hmr -e src/app.js -o dist/build2.js & http-server -c 1 -a localhost",
+    "dev3": "watchify -vd -p browserify-hmr -e src/news.js -o dist/news.js & http-server -c 1 -a localhost",
     "build": "cross-env NODE_ENV=production browserify src/main.js | uglifyjs -c warnings=false -m > dist/build.js",
-    "build2": "cross-env NODE_ENV=production browserify src/app.js | uglifyjs -c warnings=false -m > dist/build2.js"
+    "build2": "cross-env NODE_ENV=production browserify src/app.js | uglifyjs -c warnings=false -m > dist/build2.js",
+    "news": "cross-env NODE_ENV=production browserify src/news.js | uglifyjs -c warnings=false -m > dist/news.js"
   },
   "dependencies": {
     "vue": "^1.0.0"
